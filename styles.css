@@ -1,0 +1,263 @@
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180vh;
+  background: url(Image/Wallpaper\ jp.jpg) no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%; /* Sesuaikan tinggi overlay sesuai kebutuhan */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  background-position: center bottom;
+  filter: invert(100%);
+}
+
+.form1{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  color: black;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.form1 h1{
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+.form1 .Input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.Input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: black;
+  padding: 20px 45px 20px 20px
+}
+
+.Input-box input ::placeholder {
+  color: white;
+}
+.Input-box i {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.form1 .button{
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  transition: .5s;
+}
+.form1 .button:hover {
+background: white;
+color: black;
+}
+
+.Input-box {
+  position: relative;
+}
+
+.user-input {
+  padding-left: 30px; /* Sesuaikan sesuai dengan lebar gambar */
+}
+
+.user-label {
+  position: absolute;
+  right: 20px; /* Sesuaikan sesuai dengan lebar gambar dan padding input */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: text;
+}
+
+.user-label img{
+  height: 23px;
+}
+
+.bar2{
+  font-size: 20px;
+  padding-left: 10px;
+  border-left: 1px solid ;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: lightgrey;
+}
+
+.bar1{
+  font-size: 20px;
+  color: lightgrey;
+}
+  
+.bar3{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.btn btn-outline-success{
+  color: blue;
+}
+
+.nav-link{
+  position: relative;
+  color: lightgray;
+}
+
+.nav-link:hover{
+  color: white;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red; /* Ganti dengan warna yang diinginkan */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.dropdown-menu a {
+  color: lightgrey; /* Ganti dengan warna yang diinginkan */
+}
+
+.recomended{
+  font-size: 35px;
+}
+
+.dropdown-divider{
+  border-bottom: 2px solid red;
+  width: 100%;
+}
+
+.navbar-collapse{
+padding-left: 40px;
+}
+
+.header1 img{
+  width: 100%; 
+  height: auto; 
+}
+
+.styled-heading {
+  color: white; 
+  font-size: 35px; 
+  border-bottom: 1px solid white; 
+  padding-bottom: 10px; 
+  width: 100%;
+  margin: auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.styled-heading2 {
+  color: white; 
+  font-size: 35px; 
+  border-top: 1px solid red;
+  border-bottom: 1px solid red; 
+  padding-bottom: 10px; 
+  width: 100%;
+  margin: auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); 
+}
+
+.foter3 a.btn {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1d1d1d;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.foter3 a.btn:hover {
+  background-color: #424649;
+  color: white;
+}
+
+.foter2 a.btn {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #25292c;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.foter2 a.btn:hover {
+  background-color: #424649;
+  color: white;
+}
+
+
+.btn-dark {
+  background-color: #1d1d1d; /* Dark background color */
+  color: #fff; /* White text color */
+}
+
+#aboutContent {
+  transition: opacity 0.5s ease-in-out; /* Animasi muncul */
+}
+
