@@ -1,3 +1,8 @@
+.logo1{
+  text-decoration: none; /* Menghilangkan garis bawah default untuk tautan */
+  outline: none; /* Menghilangkan efek focus border pada beberapa browser */
+  border: 0; /* Menghilangkan border pada gambar yang terkait dengan tautan */
+}
 
 .box{
   display: flex;
@@ -109,12 +114,42 @@ color: black;
 
 .bar2{
   font-size: 20px;
-  padding-left: 10px;
-  border-left: 1px solid ;
+  border-left: 2px solid ;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  color: lightgrey;
+  padding-right: 20px;
+}
+
+.batas{
+  position: relative;
+  top: 6px;
+  left: 10px;
+  font-size: 1px;
+  border-left: 2px solid ;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 14px;
   color: lightgrey;
 }
+
+.batas2{
+  position: relative;
+  top: 6px;
+  left: 18px;
+  font-size: 1px;
+  border-left: 2px solid ;
+  padding-bottom: 10px;
+  padding-top: 14px;
+  color: lightgrey;
+}
+
+
+a.tombol:hover {
+  background-color: white; /* Warna background putih saat hover */
+  color: black; /* Warna tulisan hitam saat hover */
+}
+
+
 
 .bar1{
   font-size: 20px;
@@ -122,10 +157,16 @@ color: black;
 }
   
 .bar3{
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
-  margin-right: 10px;
+  width: 65px;
+  height: 45px;
+  position: relative;
+  bottom: 4px;
+  right: 20px;
+  transition: filter 1.2s ease;
+}
+
+.bar3:hover {
+  filter: brightness(2.5); /* Ganti nilai brightness sesuai kebutuhan */
 }
 
 .btn btn-outline-success{
@@ -147,7 +188,8 @@ color: black;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: red; /* Ganti dengan warna yang diinginkan */
+  background-color: red; 
+  transform-origin: bottom left; /* Set the transform origin to bottom right */
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -157,7 +199,7 @@ color: black;
 }
 
 .dropdown-menu a {
-  color: lightgrey; /* Ganti dengan warna yang diinginkan */
+  color: lightgrey; 
 }
 
 .recomended{
@@ -188,16 +230,6 @@ padding-left: 40px;
   animation: fadeInUp 1s ease-in-out;
 }
 
-.styled-heading2 {
-  color: white; 
-  font-size: 35px; 
-  border-top: 1px solid red;
-  border-bottom: 1px solid red; 
-  padding-bottom: 10px; 
-  width: 100%;
-  margin: auto;
-  animation: fadeInUp 1s ease-in-out;
-}
 
 @keyframes fadeInUp {
   from {
@@ -209,6 +241,52 @@ padding-left: 40px;
     transform: translateY(0);
   }
 }
+
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px); 
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0); 
+  }
+}
+
+
+#animeCard.fade-in-left {
+  animation: fadeInLeft 0.8s ease-in-out forwards;
+}
+
+
+#animeCard {
+  background-color: #1d1d1d;
+  border-radius: 0;
+  height: auto;
+  opacity: 0; 
+}
+
+.container {
+  padding: 1rem; /* Gaya tambahan jika diperlukan */
+}
+
+
+
+.styled-heading2 {
+  color: white; 
+  font-size: 30px; 
+  border-bottom: 1px solid red; 
+  border-top: 1px solid red;
+  padding-bottom: 10px; 
+  width: 100%;
+  margin: auto;
+  opacity: 0;
+  animation: fadeInHeading 0.8s ease-in-out forwards;
+  background-color: #1d1d1d;
+  opacity: 1;
+}
+
 
 hr {
   width: 100%;
@@ -224,7 +302,7 @@ hr {
 }
 
 .social-icon:hover {
-  transform: scale(1.2); 
+  transform: scale(1.4); 
 }
 
 .foter3 a.btn {
@@ -261,3 +339,177 @@ hr {
   transition: opacity 0.5s ease-in-out; /* Animasi muncul */
 }
 
+.custom-width {
+  max-width: 70%; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+
+.animated-text {
+  overflow: hidden;
+}
+
+.animated-text h3,p {
+  opacity: 0;
+  animation: reveal 5s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.animated-item {
+  opacity: 0;
+  animation: reveal 5s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-image{
+  overflow: hidden;
+  opacity: 0;
+  animation: reveal 5s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-image1{
+  overflow: hidden;
+  opacity: 0;
+  animation: reveal 3s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-options {
+  display: none;
+}
+
+.open-options {
+  display: block;
+}
+
+#gameOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#optionsContainer {
+  text-align: center;
+}
+
+#gameOptions img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto; /* Memusatkan gambar */
+}
+
+#gameOptions p {
+  margin-bottom: 10px;
+}
+
+#gameOptions li {
+  display: block;
+  margin: 5px auto; /* Memusatkan li */
+}
+
+.circle {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 3px;
+  background-color: black;
+  border: none;
+}
+
+.circle1 {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 14px;
+  background-color: black;
+  border: none;
+}
+.circle2 {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 3px;
+  background-color: black;
+  border: none;
+}
+.circle3 {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 12px;
+  background-color: black;
+  border: none;
+}
+.circle4 {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 3px;
+  background-color: black;
+  border: none;
+}
+
+.circle5{
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  right: 3px;
+  background-color: black;
+  border: none;
+}
